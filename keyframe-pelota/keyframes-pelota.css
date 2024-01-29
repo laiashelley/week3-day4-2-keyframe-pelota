@@ -1,0 +1,37 @@
+body{
+    background-image:url(/img/fondo.jpg);
+    height: 800px;
+    width: 100%;
+    overflow: hidden;
+    animation-name: kirby-fondo;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    background-size: 120%;
+}
+
+.kirbycontainer{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 800px;
+    animation-name: kirby;
+    animation-duration: 3.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction:alternate; 
+    position: relative;
+}
+
+@keyframes kirby {
+    0% { top: 0px; transform: scaleY(1);}
+    25% { top: 600px; transform: scaleY(0.3);}
+    50% { top: 200px; transform: scaleY(1);}
+    75% { top: 600px; transform: scaleY(0.3);}
+    100% { top: 200px; transform: scaleY(1);}
+}
+
+@keyframes kirby-fondo {
+    0% { background-position: 0 0; }
+    100% { background-position: 100% 0; }
+}
